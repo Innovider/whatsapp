@@ -3,6 +3,7 @@
 let link = 'https://api.whatsapp.com/send?phone=';
 
 $('button').click(function(){
+    alert('Hi!');
     let field = $('input').val();
 
     for(let i = 0; i < field.length; i++){
