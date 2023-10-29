@@ -3,14 +3,12 @@
 let link = 'https://api.whatsapp.com/send?phone=';
 
 $('button').click(function(){
-    alert('Hi!');
     let field = $('input').val();
 
     for(let i = 0; i < field.length; i++){
-        if (i === 0 && field[i] === "8") {
+        if (i === 0) {
             link = `${link}7`;
-
-            if (
+        }else if (
               field[i] === "+" ||
               field[i] === "(" ||
               field[i] === ")" ||
@@ -21,7 +19,6 @@ $('button').click(function(){
             }else{
               link = link + field[i];
             }
-        }
     }
     
     $(location).attr('href',link);
