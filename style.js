@@ -8,18 +8,20 @@ $('button').click(function(){
 
     for(let i = 0; i < field.length; i++){
         if (i === 0 && field[i] === "8") {
-            link = link + 7;
-        }else if (
-          field[i] === "+" ||
-          field[i] === "(" ||
-          field[i] === ")" ||
-          field[i] === "-" ||
-          field[i] === " "
-        ){
-          link = links + "";  
-        }else{
-            link = link + field[i];
-        }   
+            link = `${link}7`;
+
+            if (
+              field[i] === "+" ||
+              field[i] === "(" ||
+              field[i] === ")" ||
+              field[i] === "-" ||
+              field[i] === " "
+            ){
+              link = link + "";  
+            }else{
+              link = link + field[i];
+            }
+        }
     }
     
     $(location).attr('href',link);
