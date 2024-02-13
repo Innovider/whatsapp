@@ -16,10 +16,10 @@ document.getElementById("button").addEventListener("click", () => {
     }
   }
 
-  // //let link = `https://api.whatsapp.com/send?phone=${fNum}`;
-
   let formLink = window.location.href;
-  let link = `https://wa.me/${fNum}?text=Перейдите по этой ссылке ${formLink}`;
+  // let link = `https://api.whatsapp.com/send?phone=${fNum}`;
+  // let link = `https://wa.me/${fNum}?text=Перейдите по этой ссылке ${formLink}`;
+  let link = `https://wa.me/${fNum}`;
   document.getElementById("link").setAttribute("href", link);
   document.getElementById("link").click();
 });
